@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Stage5 : MonoBehaviour
-{
+public class Stage5 : MonoBehaviour {
 
     public GameObject Red, Blue, Green, redD, blueD, greenD, pinkD, cyanD, yellowD, grayD, Player;
 
@@ -15,8 +14,7 @@ public class Stage5 : MonoBehaviour
 	void Update () {
 		if(Player.GetComponent<PlayerStatus>().red == 2 && Player.GetComponent<PlayerStatus>().blue == 2 && Player.GetComponent<PlayerStatus>().green == 2)
         {
-            PlayerPrefs.SetInt("SceneClear5", 1);
-
+            PlayerPrefs.SetInt("SceneClear1", 1);
             Time.timeScale = 1;
             PlayerPrefs.SetInt("istomain", 1);
             SceneManager.LoadScene("LoadingScene");
@@ -79,78 +77,21 @@ public class Stage5 : MonoBehaviour
 
             case 1:
                 RotationZ = Random.Range(-120, -60);
-                switch (r2)
-                {
-                    case 0:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 1:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 2:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 3:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 4:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 5:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                }
+                Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                 break;
 
             case 2:
                 RotationZ = Random.Range(130, 220);
-                switch (r2)
-                {
-                    case 0:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 1:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 2:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 3:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 4:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 5:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                }
+                Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                 break;
 
             case 3:
                 RotationZ = Random.Range(60, 120);
-                switch (r2)
-                {
-                    case 0:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 1:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 2:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 3:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 4:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                    case 5:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
-                        break;
-                }
+                Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                 break;
         }
+        
+
+
     }
 }

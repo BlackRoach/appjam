@@ -14,6 +14,7 @@ public class InGray : MonoBehaviour {
 
     void Update() {
         transform.Translate(Speed * Time.deltaTime, 0, 0);
+
     }
 
     void OnBecameInvisible()
