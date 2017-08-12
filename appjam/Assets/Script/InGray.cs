@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InBullet : MonoBehaviour {
+public class InGray : MonoBehaviour {
     public int Speed;
     bool bounce = true;
 
@@ -14,5 +14,10 @@ public class InBullet : MonoBehaviour {
 
     void Update() {
         transform.Translate(Speed * Time.deltaTime, 0, 0);
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }
