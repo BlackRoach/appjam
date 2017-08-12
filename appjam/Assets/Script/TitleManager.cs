@@ -5,7 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour {
-
+    [SerializeField]
+    private GameObject soundmanager;
+    [SerializeField]
+    private GameObject auidosource;
     [SerializeField]
     private GameObject Buttons;
     [SerializeField]
@@ -25,7 +28,9 @@ public class TitleManager : MonoBehaviour {
     [SerializeField]
     private GameObject Logo;
     [SerializeField]
-    private Image[] AlbumList;
+    private GameObject[] AlbumList;
+    [SerializeField]
+    private GameObject[] starList;
     [SerializeField]
     private Sprite[] Album;
     [SerializeField]
@@ -49,12 +54,17 @@ public class TitleManager : MonoBehaviour {
         stageison2 = false;
     }
     void Start () {
+       
         Bgm = PlayerPrefs.GetInt("Bgm",0);
         Sound = PlayerPrefs.GetInt("Sound",0);
         for (int i = 1; i<=7; i++)
         {
-            if (PlayerPrefs.GetInt("SceneClear" + i) >= 1)
+          
+            if (PlayerPrefs.GetInt("SceneClear" + i) == 1)
+            {
+                starList[i].SetActive(true);
                 AlbumList[i].GetComponent<Image>().sprite = AlbumClear[i];
+            }
             else
                 AlbumList[i].GetComponent<Image>().sprite = Album[i];
         }
@@ -62,21 +72,25 @@ public class TitleManager : MonoBehaviour {
         {
             bgmison = true;
             BgmButton.GetComponent<Image>().sprite = ButtonImage[1];
+            auidosource.SetActive(false);
         }
         else
         {
             bgmison = false;
             BgmButton.GetComponent<Image>().sprite = ButtonImage[2];
+            auidosource.SetActive(true);
         }
         if (Sound == 1)
         {
             soundison = true;
             SoundButton.GetComponent<Image>().sprite = ButtonImage[3];
+            soundmanager.SetActive(false);
         }
         else
         {
             soundison = false;
             SoundButton.GetComponent<Image>().sprite = ButtonImage[4];
+            soundmanager.SetActive(true);
         }
 
 
@@ -148,12 +162,14 @@ public class TitleManager : MonoBehaviour {
             bgmison = true;
             PlayerPrefs.SetInt("Bgm", 1);
             BgmButton.GetComponent<Image>().sprite = ButtonImage[1];
+            auidosource.SetActive(false);
         }
         else
         {
             bgmison = false;
             PlayerPrefs.SetInt("Bgm", 0);
             BgmButton.GetComponent<Image>().sprite = ButtonImage[2];
+            auidosource.SetActive(true);
         }
     }
     public void Soundbutton()
@@ -165,12 +181,14 @@ public class TitleManager : MonoBehaviour {
             soundison = true;
             PlayerPrefs.SetInt("Sound", 1);
             SoundButton.GetComponent<Image>().sprite = ButtonImage[3];
+            soundmanager.SetActive(false);
         }
         else
         {
             soundison = false;
             PlayerPrefs.SetInt("Sound", 0);
             SoundButton.GetComponent<Image>().sprite = ButtonImage[4];
+            soundmanager.SetActive(true);
         }
     }
     public void Developers()

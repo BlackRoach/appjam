@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerStatus : MonoBehaviour {
 
     public Text TimerText;
@@ -19,7 +20,10 @@ public class PlayerStatus : MonoBehaviour {
         TimerText.GetComponent<Text>().text = "" + (int)Timer;
         if (Timer <= 0)  //게임오버
         {
-            GameOver = true;
+            SoundManager.instance.PlaySound();
+            Time.timeScale = 1;
+            PlayerPrefs.SetInt("istomain", 1);
+            SceneManager.LoadScene("LoadingScene");
         }
 	}
 
