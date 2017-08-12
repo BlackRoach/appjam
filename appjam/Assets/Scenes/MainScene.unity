@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  PLR: {fileID: 724740073}
 --- !u!23 &724740075
 MeshRenderer:
   m_ObjectHideFlags: 0
