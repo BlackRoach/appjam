@@ -23,6 +23,8 @@ public class TitleManager : MonoBehaviour {
     [SerializeField]
     private GameObject SoundButton;
     [SerializeField]
+    private GameObject Logo;
+    [SerializeField]
     private Image[] AlbumList;
     [SerializeField]
     private Sprite[] Album;
@@ -38,6 +40,7 @@ public class TitleManager : MonoBehaviour {
     private bool soundison;
     private bool stageison;
     private bool stageison2;
+   // PlayerPrefs.SetInt("SceneClear1", 1);  그 스테이지 클리어 했을때
 
     private void Awake()
     {
@@ -123,12 +126,13 @@ public class TitleManager : MonoBehaviour {
     }
     public void Option()
     {
-        
+        Logo.SetActive(false);
         OptionWindow.SetActive(true);
         Buttons.SetActive(false);
     }
     public void CloseOption()
     {
+        Logo.SetActive(true);
         OptionWindow.SetActive(false);
         Buttons.SetActive(true);
     }

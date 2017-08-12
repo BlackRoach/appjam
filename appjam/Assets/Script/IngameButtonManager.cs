@@ -13,6 +13,7 @@ public class IngameButtonManager : MonoBehaviour {
     private GameObject BgmButton;
     [SerializeField]
     private GameObject SoundButton;
+
     [SerializeField]
     private Sprite[] ButtonImage;
     private int Bgm;
@@ -53,6 +54,7 @@ public class IngameButtonManager : MonoBehaviour {
     public void oPauseButton()
     {
         Time.timeScale = 0;
+        
         PauseWindow.SetActive(true);
         PauseButton.SetActive(false);
     }
