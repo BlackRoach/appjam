@@ -7,6 +7,8 @@ public class TitleManager : MonoBehaviour {
     [SerializeField]
     private GameObject Buttons;
     [SerializeField]
+    private GameObject TitleWindow;
+    [SerializeField]
     private GameObject OptionWindow;
     [SerializeField]
     private GameObject StageWindow;
@@ -14,10 +16,12 @@ public class TitleManager : MonoBehaviour {
     private GameObject DeveloperWindow;
     [SerializeField]
     private GameObject TitleBackground;
+
+    private int speed = 5;
     private bool bgmison;
     private bool soundison;
     private bool stageison;
-
+   
     private void Awake()
     {
         bgmison = false;
@@ -28,18 +32,42 @@ public class TitleManager : MonoBehaviour {
         
 
     }
-	
-	
-	
+    public void Update()
+    {
+        if(stageison == true)
+        {
+            TitleWindow.transform.position = new Vector3(0, TitleWindow.transform.position.y + (speed * Time.deltaTime), 0);
+            while (true)
+            {
+                if (TitleWindow.transform.position.y >= 3200)
+                {
+                    stageison = false;
+                    break;
+                }
+               
+            }
+            
+        }
+    }
+
+    private void MoveTitle()
+    {
+      
+    }
+
 
     public void StartGame()
     {
-        StageWindow.SetActive(true);
-        Buttons.SetActive(false);
-        TitleBackground.SetActive(false);
+        stageison = true;
+
+      
+        //StageWindow.SetActive(true);
+        //Buttons.SetActive(false);
+        //TitleBackground.SetActive(false);
     }
     public void CloseStart()
     {
+     
         StageWindow.SetActive(false);
         Buttons.SetActive(true);
         TitleBackground.SetActive(true);
@@ -95,4 +123,6 @@ public class TitleManager : MonoBehaviour {
     {
 
     }
+
+
 }

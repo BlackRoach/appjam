@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
-    public float Speed = 0;
-    public GameObject PLR;
+    [SerializeField]
+    private float Speed = 0;
     private Vector3 beforeposition;
     private bool stop;
     private void Start()
@@ -35,8 +35,8 @@ public class PlayerMove : MonoBehaviour {
     void Move(Vector3 target)
     {
         target.z = 0;
-            stop = false;
-            Speed = 5;
-            transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
+        stop = false;
+        Speed = 5;
+        transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
     }
 }
