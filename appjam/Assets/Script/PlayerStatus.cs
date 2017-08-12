@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour {
-    
+
+    public Text TimerText;
     float Timer, noHitTime = 0.3f;
     int red = 0, blue = 0, green = 0;
     bool GameOver = false, nohit = false;
@@ -15,8 +16,8 @@ public class PlayerStatus : MonoBehaviour {
 	
 	void Update () {
         Timer -= Time.deltaTime;
-
-        if(Timer <= 0)  //게임오버
+        TimerText.GetComponent<Text>().text = "" + (int)Timer;
+        if (Timer <= 0)  //게임오버
         {
             GameOver = true;
         }
