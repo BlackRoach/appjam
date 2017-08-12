@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour {
     
-    float Timer, noHitTime = 0.7f;
+    float Timer, noHitTime = 0.3f;
     int red = 0, blue = 0, green = 0;
     bool GameOver = false, nohit = false;
     public Sprite RedStar, BlueStar, GreenStar, YellowStar;
