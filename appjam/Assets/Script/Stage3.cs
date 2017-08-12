@@ -27,36 +27,83 @@ public class Stage3 : MonoBehaviour
 
     void Spawn()
     {
-        int r = Random.Range(0, 3);
-        int r2;
-        float PositionX = Random.Range(-2.2f, 2.2f);
-        float PositionY = Random.Range(-4.0f, 4.5f);
+        int r;
+        float PositionX = Random.Range(-1.0f, 1.0f);
+        float PositionY = Random.Range(-2.0f, 2.0f);
         float RotationZ;
+        r = Random.Range(0, 6);
         switch (r)
         {
             case 0:
-                Instantiate(Red, new Vector3(PositionX, PositionY, -1), transform.rotation);
+                RotationZ = Random.Range(-45, 45);
+                switch (r)
+                {
+                    case 0:
+                        Instantiate(Red, new Vector3(-3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 1:
+                        Instantiate(Blue, new Vector3(-3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 2:
+                        Instantiate(Green, new Vector3(-3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                }
                 break;
 
             case 1:
-                Instantiate(Blue, new Vector3(PositionX, PositionY, -1), transform.rotation);
+                RotationZ = Random.Range(-120, -60);
+                switch (r)
+                {
+                    case 0:
+                        Instantiate(Red, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 1:
+                        Instantiate(Blue, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 2:
+                        Instantiate(Green, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                }
                 break;
 
             case 2:
-                Instantiate(Green, new Vector3(PositionX, PositionY, -1), transform.rotation);
+                RotationZ = Random.Range(130, 220);
+                switch (r)
+                {
+                    case 0:
+                        Instantiate(Red, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 1:
+                        Instantiate(Blue, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 2:
+                        Instantiate(Green, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                }
+                break;
+
+            case 3:
+                RotationZ = Random.Range(60, 120);
+                switch (r)
+                {
+                    case 0:
+                        Instantiate(Red, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 1:
+                        Instantiate(Blue, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                    case 2:
+                        Instantiate(Green, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        break;
+                }
                 break;
         }
-
-        r = Random.Range(0, 3);
-        r2 = Random.Range(0, 6);
-        PositionX = Random.Range(-1.0f, 1.0f);
-        PositionY = Random.Range(-2.0f, 2.0f);
 
         switch (r)
         {
             case 0:
                 RotationZ = Random.Range(-45, 45);
-                switch (r2)
+                switch (r)
                 {
                     case 0:
                         Instantiate(redD, new Vector3(-3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
@@ -81,75 +128,75 @@ public class Stage3 : MonoBehaviour
 
             case 1:
                 RotationZ = Random.Range(-120, -60);
-                switch (r2)
+                switch (r)
                 {
                     case 0:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
                         Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(greenD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;
 
             case 2:
                 RotationZ = Random.Range(130, 220);
-                switch (r2)
+                switch (r)
                 {
                     case 0:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(blueD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
                         Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;
 
             case 3:
                 RotationZ = Random.Range(60, 120);
-                switch (r2)
+                switch (r)
                 {
                     case 0:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(blueD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
                         Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;

@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class IngameButtonManager : MonoBehaviour {
 
     [SerializeField]
+    private GameObject soundmanager;
+    [SerializeField]
+    private GameObject auidosource;
+    [SerializeField]
     private PlayerStatus player;
     [SerializeField]
     private GameObject PauseWindow;
@@ -40,21 +44,25 @@ public class IngameButtonManager : MonoBehaviour {
         {
             bgmison = true;
             BgmButton.GetComponent<Image>().sprite = ButtonImage[1];
+            auidosource.SetActive(false);
         }
         else
         {
             bgmison = false;
             BgmButton.GetComponent<Image>().sprite = ButtonImage[2];
+            auidosource.SetActive(true);
         }
         if (Sound == 1)
         {
             soundison = true;
             SoundButton.GetComponent<Image>().sprite = ButtonImage[3];
+            soundmanager.SetActive(false);
         }
         else
         {
             soundison = false;
             SoundButton.GetComponent<Image>().sprite = ButtonImage[4];
+            soundmanager.SetActive(true);
         }
     }
 	
@@ -124,12 +132,16 @@ public class IngameButtonManager : MonoBehaviour {
             bgmison = true;
             PlayerPrefs.SetInt("Bgm", 1);
             BgmButton.GetComponent<Image>().sprite = ButtonImage[1];
+            auidosource.SetActive(false);
+
+
         }
         else
         {
             bgmison = false;
             PlayerPrefs.SetInt("Bgm", 0);
             BgmButton.GetComponent<Image>().sprite = ButtonImage[2];
+            auidosource.SetActive(true);
         }
     }
     public void SoundButtons()
@@ -140,12 +152,14 @@ public class IngameButtonManager : MonoBehaviour {
             soundison = true;
             PlayerPrefs.SetInt("Sound", 1);
             SoundButton.GetComponent<Image>().sprite = ButtonImage[3];
+            soundmanager.SetActive(false);
         }
         else
         {
             soundison = false;
             PlayerPrefs.SetInt("Sound", 0);
             SoundButton.GetComponent<Image>().sprite = ButtonImage[4];
+            soundmanager.SetActive(true);
         }
     }
     public void BackButton()

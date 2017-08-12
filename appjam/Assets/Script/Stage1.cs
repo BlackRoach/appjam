@@ -131,22 +131,22 @@ public class Stage1 : MonoBehaviour
                 switch (r)
                 {
                     case 0:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
                         Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(greenD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(blueD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(PositionX, 5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;
@@ -156,22 +156,22 @@ public class Stage1 : MonoBehaviour
                 switch (r)
                 {
                     case 0:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(blueD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
                         Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(greenD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;
@@ -181,22 +181,22 @@ public class Stage1 : MonoBehaviour
                 switch (r)
                 {
                     case 0:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(redD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 1:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(blueD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 2:
                         Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 3:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(yellowD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 4:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(pinkD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                     case 5:
-                        Instantiate(greenD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
+                        Instantiate(cyanD, new Vector3(PositionX, -5.4f, -1), Quaternion.Euler(0, 0, RotationZ));
                         break;
                 }
                 break;
