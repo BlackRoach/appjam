@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class LoadingScript : MonoBehaviour
 {
 
-    public Slider slider;
     bool IsDone = false;
     float fTime = 0f;
     int m_chapternum;
@@ -14,18 +13,17 @@ public class LoadingScript : MonoBehaviour
 
     void Start()
     {
-        //m_chapternum = PlayerPrefs.GetInt(Prefstype.ChapterNum);
-        //m_istomain = PlayerPrefs.GetInt(Prefstype.IsToMain);
-        //if(m_istomain == 0)
-        //    StartCoroutine(StartLoad(SceneType.InGame));
-        //else if (m_istomain == 1)
-        //    StartCoroutine(StartLoad(SceneType.Title));
+        m_chapternum = PlayerPrefs.GetInt("StageNum");
+        m_istomain = PlayerPrefs.GetInt("istomain");
+        if (m_istomain == 0)  // 게임씬
+            StartCoroutine(StartLoad("MainScene"));
+        else if (m_istomain == 1) // 메인으로
+            StartCoroutine(StartLoad("TitleScene"));
     }
 
     void Update()
     {
         fTime += Time.deltaTime;
-        slider.value = fTime;
 
         if (fTime >= 2)
         {
@@ -46,7 +44,6 @@ public class LoadingScript : MonoBehaviour
 
             while (async_operation.progress < 0.9f)
             {
-                slider.value = async_operation.progress;
                 yield return true;
             }
         }
