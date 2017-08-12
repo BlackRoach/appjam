@@ -17,7 +17,7 @@ public class TitleManager : MonoBehaviour {
     [SerializeField]
     private GameObject TitleBackground;
 
-    private int speed = 5;
+    private int speed = 8;
     private bool bgmison;
     private bool soundison;
     private bool stageison;
@@ -37,15 +37,15 @@ public class TitleManager : MonoBehaviour {
         if(stageison == true)
         {
             TitleWindow.transform.position = new Vector3(0, TitleWindow.transform.position.y + (speed * Time.deltaTime), 0);
-            while (true)
+            Debug.Log(TitleWindow.transform.position.y);
+            if (TitleWindow.transform.position.y >= 10) 
             {
-                if (TitleWindow.transform.position.y >= 3200)
-                {
-                    stageison = false;
-                    break;
-                }
-               
+                stageison = false;
+                Debug.Log(1);
+             
             }
+               
+        
             
         }
     }
@@ -81,7 +81,7 @@ public class TitleManager : MonoBehaviour {
     public void CloseOption()
     {
         OptionWindow.SetActive(false);
-        Buttons.SetActive(false);
+        Buttons.SetActive(true);
     }
     public void Bgmbutton()
     {
