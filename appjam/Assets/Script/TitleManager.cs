@@ -40,6 +40,7 @@ public class TitleManager : MonoBehaviour {
     private bool soundison;
     private bool stageison;
     private bool stageison2;
+   // PlayerPrefs.SetInt("SceneClear1", 1);  그 스테이지 클리어 했을때
 
     private void Awake()
     {
