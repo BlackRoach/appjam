@@ -118,26 +118,31 @@ public class TitleManager : MonoBehaviour {
 
     public void StartGame()
     {
+        SoundManager.instance.PlaySound();
         stageison = true;
     }
     public void CloseStart()
     {
+        SoundManager.instance.PlaySound();
         stageison2 = true;
     }
     public void Option()
     {
+        SoundManager.instance.PlaySound();
         Logo.SetActive(false);
         OptionWindow.SetActive(true);
         Buttons.SetActive(false);
     }
     public void CloseOption()
     {
+        SoundManager.instance.PlaySound();
         Logo.SetActive(true);
         OptionWindow.SetActive(false);
         Buttons.SetActive(true);
     }
     public void Bgmbutton()
     {
+        SoundManager.instance.PlaySound();
         if (bgmison == false)
         {
             bgmison = true;
@@ -153,8 +158,10 @@ public class TitleManager : MonoBehaviour {
     }
     public void Soundbutton()
     {
+        SoundManager.instance.PlaySound();
         if (soundison == false)
         {
+
             soundison = true;
             PlayerPrefs.SetInt("Sound", 1);
             SoundButton.GetComponent<Image>().sprite = ButtonImage[3];
@@ -168,16 +175,19 @@ public class TitleManager : MonoBehaviour {
     }
     public void Developers()
     {
+        SoundManager.instance.PlaySound();
         DeveloperWindow.SetActive(true);
         OptionWindow.SetActive(false);
     } 
     public void DevelopersClose()
     {
+        SoundManager.instance.PlaySound();
         DeveloperWindow.SetActive(false);
         OptionWindow.SetActive(true);
     }
     public void StageButton(int num)
     {
+        SoundManager.instance.PlaySound();
         PlayerPrefs.SetInt("istomain", 0);
         PlayerPrefs.SetInt("StageNum", num);
         SceneManager.LoadScene("LoadingScene");

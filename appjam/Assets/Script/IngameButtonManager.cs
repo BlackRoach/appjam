@@ -103,6 +103,7 @@ public class IngameButtonManager : MonoBehaviour {
 	}
     public void oPauseButton()
     {
+        SoundManager.instance.PlaySound();
         Time.timeScale = 0;
         
         PauseWindow.SetActive(true);
@@ -110,12 +111,14 @@ public class IngameButtonManager : MonoBehaviour {
     }
     public void ClosePauseButton()
     {
+        SoundManager.instance.PlaySound();
         Time.timeScale = 1;
         PauseWindow.SetActive(false);
         PauseButton.SetActive(true);
     }
     public void BgmButtons()
     {
+        SoundManager.instance.PlaySound();
         if (bgmison == false)
         {
             bgmison = true;
@@ -131,6 +134,7 @@ public class IngameButtonManager : MonoBehaviour {
     }
     public void SoundButtons()
     {
+        SoundManager.instance.PlaySound();
         if (soundison == false)
         {
             soundison = true;
@@ -146,6 +150,7 @@ public class IngameButtonManager : MonoBehaviour {
     }
     public void BackButton()
     {
+        SoundManager.instance.PlaySound();
         Time.timeScale = 1;
         PlayerPrefs.SetInt("istomain", 1);
         SceneManager.LoadScene("LoadingScene");
