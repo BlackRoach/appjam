@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
     public float Speed = 0;
-    public GameObject PLR;
     private Vector3 beforeposition;
     private bool stop;
     private void Start()
