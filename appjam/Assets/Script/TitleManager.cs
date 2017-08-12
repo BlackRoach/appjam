@@ -23,6 +23,8 @@ public class TitleManager : MonoBehaviour {
     [SerializeField]
     private GameObject SoundButton;
     [SerializeField]
+    private GameObject Logo;
+    [SerializeField]
     private Image[] AlbumList;
     [SerializeField]
     private Sprite[] Album;
@@ -123,12 +125,13 @@ public class TitleManager : MonoBehaviour {
     }
     public void Option()
     {
-        
+        Logo.SetActive(false);
         OptionWindow.SetActive(true);
         Buttons.SetActive(false);
     }
     public void CloseOption()
     {
+        Logo.SetActive(true);
         OptionWindow.SetActive(false);
         Buttons.SetActive(true);
     }
