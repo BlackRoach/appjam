@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour {
     
-    float Timer;
-    int red = 0, blue = 0, green = 0, noHitTime = 2;
+    float Timer, noHitTime = 0.7f;
+    int red = 0, blue = 0, green = 0;
     bool GameOver = false, nohit = false;
+    public Sprite RedStar, BlueStar, GreenStar, YellowStar;
 
 	void Start () {
         Timer = 100;
 	}
 	
-
 	void Update () {
         Timer -= Time.deltaTime;
 
@@ -28,14 +28,20 @@ public class PlayerStatus : MonoBehaviour {
         if (col.tag == "red")
         {
             red++;
+            GetComponent<SpriteRenderer>().sprite = RedStar;
+            Destroy(col.gameObject);
         }
         if (col.tag == "blue")
         {
             blue++;
+            GetComponent<SpriteRenderer>().sprite = BlueStar;
+            Destroy(col.gameObject);
         }
         if (col.tag == "green")
         {
             green++;
+            GetComponent<SpriteRenderer>().sprite = GreenStar;
+            Destroy(col.gameObject);
         }
 
         //-----------장애물
@@ -52,6 +58,7 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         if (col.tag == "blueD" && nohit == false)
         {
@@ -65,6 +72,7 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         if (col.tag == "greenD" && nohit == false)
         {
@@ -78,12 +86,14 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         if (col.tag == "grayD" && nohit == false)
         {
             Timer -= 10;
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
 
         //------혼합
@@ -113,6 +123,7 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         if (col.tag == "red_green" && nohit == false)   //빨초 or 초빨
         {
@@ -140,6 +151,7 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         if (col.tag == "blue_green" && nohit == false) //파초 or 초파
         {
@@ -167,13 +179,13 @@ public class PlayerStatus : MonoBehaviour {
             }
             nohit = true;
             Invoke("NoHitOff", noHitTime);
+            Destroy(col.gameObject);
         }
         Debug.Log("red : " + red + ", blue : " + blue + ", green : " + green + ", Time : " + Timer + " GameOver : " + GameOver);
     }
 
     void NoHitOff() //피격무적해제
     {
-        Debug.Log("피격무적해제");
         nohit = false;
     }
 }
