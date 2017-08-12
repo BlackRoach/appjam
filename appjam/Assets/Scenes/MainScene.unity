@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb0514a6f50a3f4f9dae5fd40e8b6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 573749038}
   PauseWindow: {fileID: 1745014640}
   PauseButton: {fileID: 1060108063}
   BgmButton: {fileID: 738234795}

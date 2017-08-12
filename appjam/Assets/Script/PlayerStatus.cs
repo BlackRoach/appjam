@@ -25,40 +25,25 @@ public class PlayerStatus : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        int r = Random.Range(1, 3);
         //-----------감정(점수)획득
         if (col.tag == "red")
         {
-            red += r;
+            red++;
             GetComponent<SpriteRenderer>().sprite = RedStar;
             Destroy(col.gameObject);
         }
         if (col.tag == "blue")
         {
-            blue += r;
+            blue++;
             GetComponent<SpriteRenderer>().sprite = BlueStar;
             Destroy(col.gameObject);
         }
         if (col.tag == "green")
         {
-            green += r;
+            green++;
             GetComponent<SpriteRenderer>().sprite = GreenStar;
             Destroy(col.gameObject);
         }
-        if(col.tag == "cyan")
-        {
-            green += r;
-            blue += r;
-        }
-        if(col.tag == "pink")
-        {
-
-        }
-        if(col.tag == "yellow")
-        {
-
-        }
-
         //-----------장애물
         //------단색
         if (col.tag == "redD" && nohit == false)
