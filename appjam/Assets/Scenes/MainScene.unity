@@ -108,6 +108,54 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97915808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 97915809}
+  - component: {fileID: 97915810}
+  m_Layer: 0
+  m_Name: Stage5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97915809
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97915808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97915810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97915808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4555b19ba2996f41a3f8042792a0424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Red: {fileID: 1304959618738190, guid: 68286440b7899694db8bc88b14585309, type: 2}
+  Blue: {fileID: 1031279438844050, guid: ecfb8d0477bbb1b478ced79cfd252776, type: 2}
+  Green: {fileID: 1928907337751120, guid: f7a516441665e7649995ea4bbe3ffc84, type: 2}
+  redD: {fileID: 1963268856832048, guid: e43bc21105f09bf40895c096b57822cb, type: 2}
+  blueD: {fileID: 1949157119839654, guid: 9081114de55eacd45825bb70e49338b1, type: 2}
+  greenD: {fileID: 1984947773683606, guid: fae684cd528ce1746b54be8fdd159e14, type: 2}
+  grayD: {fileID: 1764403876925664, guid: 9412766ce9cfdf14eba5c9319d0c3e27, type: 2}
+  Player: {fileID: 573749033}
 --- !u!1 &121538567
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +316,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573749033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.76, z: 0}
+  m_LocalPosition: {x: 0, y: -2.76, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,6 +349,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 1101584663}
+  red: 0
+  blue: 0
+  green: 0
   RedStar: {fileID: 21300000, guid: 36541dfcf36698045a2e31c82b0c49d4, type: 3}
   BlueStar: {fileID: 21300000, guid: c99b9475ea2ccaa459fbcd70fb198d9b, type: 3}
   GreenStar: {fileID: 21300000, guid: 44921d33cb0ecc3498b3e6965a57d9a0, type: 3}

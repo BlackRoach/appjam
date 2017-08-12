@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour {
         if(Input.GetMouseButtonUp(0))
         {
             beforeposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            beforeposition.z = 0;
+            beforeposition.z = -1;
             stop = true;
            
         }
@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour {
 
     void Move(Vector3 target)
     {
-        target.z = 0;
+        target.z = -1;
         stop = false;
         Speed = 5;
         transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);

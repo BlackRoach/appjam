@@ -6,7 +6,7 @@ public class PlayerStatus : MonoBehaviour {
 
     public Text TimerText;
     float Timer, noHitTime = 0.3f;
-    int red = 0, blue = 0, green = 0;
+    public int red = 0, blue = 0, green = 0;
     bool GameOver = false, nohit = false;
     public Sprite RedStar, BlueStar, GreenStar, YellowStar;
 
@@ -25,22 +25,23 @@ public class PlayerStatus : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        int r = Random.Range(1, 3);
         //-----------감정(점수)획득
         if (col.tag == "red")
         {
-            red++;
+            red += r;
             GetComponent<SpriteRenderer>().sprite = RedStar;
             Destroy(col.gameObject);
         }
         if (col.tag == "blue")
         {
-            blue++;
+            blue += r;
             GetComponent<SpriteRenderer>().sprite = BlueStar;
             Destroy(col.gameObject);
         }
         if (col.tag == "green")
         {
-            green++;
+            green += r;
             GetComponent<SpriteRenderer>().sprite = GreenStar;
             Destroy(col.gameObject);
         }
