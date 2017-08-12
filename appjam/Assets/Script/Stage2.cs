@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Stage5 : MonoBehaviour
+public class Stage2 : MonoBehaviour
 {
 
     public GameObject Red, Blue, Green, redD, blueD, greenD, pinkD, cyanD, yellowD, grayD, Player;
 
-	void Start () {
-        InvokeRepeating("Spawn", 1, 3);
-	}
-	
-	void Update () {
-		if(Player.GetComponent<PlayerStatus>().red == 2 && Player.GetComponent<PlayerStatus>().blue == 2 && Player.GetComponent<PlayerStatus>().green == 2)
+    void Start()
+    {
+        InvokeRepeating("Spawn", 1, 4);
+    }
+
+    void Update()
+    {
+        if (Player.GetComponent<PlayerStatus>().red == 1 && Player.GetComponent<PlayerStatus>().blue == 1 && Player.GetComponent<PlayerStatus>().green == 0)
         {
-            PlayerPrefs.SetInt("SceneClear5", 1);
+            PlayerPrefs.SetInt("SceneClear2", 1);
 
             Time.timeScale = 1;
             PlayerPrefs.SetInt("istomain", 1);
             SceneManager.LoadScene("LoadingScene");
         }
-	}
+    }
 
     void Spawn()
     {
@@ -44,17 +46,17 @@ public class Stage5 : MonoBehaviour
                 Instantiate(Green, new Vector3(PositionX, PositionY, -1), transform.rotation);
                 break;
         }
-        
+
         r = Random.Range(0, 3);
         r2 = Random.Range(0, 6);
         PositionX = Random.Range(-1.0f, 1.0f);
         PositionY = Random.Range(-2.0f, 2.0f);
-        
+
         switch (r)
         {
             case 0:
                 RotationZ = Random.Range(-45, 45);
-                switch(r2)
+                switch (r2)
                 {
                     case 0:
                         Instantiate(redD, new Vector3(-3.3f, PositionY, -1), Quaternion.Euler(0, 0, RotationZ));

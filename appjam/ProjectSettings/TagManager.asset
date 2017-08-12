@@ -14,6 +14,9 @@ TagManager:
   - red_blue
   - red_green
   - blue_green
+  - cyan
+  - pink
+  - yellow
   layers:
   - Default
   - TransparentFX

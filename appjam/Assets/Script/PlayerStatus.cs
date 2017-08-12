@@ -45,6 +45,19 @@ public class PlayerStatus : MonoBehaviour {
             GetComponent<SpriteRenderer>().sprite = GreenStar;
             Destroy(col.gameObject);
         }
+        if(col.tag == "cyan")
+        {
+            green += r;
+            blue += r;
+        }
+        if(col.tag == "pink")
+        {
+
+        }
+        if(col.tag == "yellow")
+        {
+
+        }
 
         //-----------장애물
         //------단색

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1696428195487338}
+  m_IsPrefabParent: 1
+--- !u!1 &1696428195487338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4775577652113492}
+  - component: {fileID: 114555897141313374}
+  m_Layer: 0
+  m_Name: Stage3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4775577652113492
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1696428195487338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114555897141313374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1696428195487338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cf8df94d61fd24f8a4755cffb36a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Red: {fileID: 1304959618738190, guid: 68286440b7899694db8bc88b14585309, type: 2}
+  Blue: {fileID: 1031279438844050, guid: ecfb8d0477bbb1b478ced79cfd252776, type: 2}
+  Green: {fileID: 1928907337751120, guid: f7a516441665e7649995ea4bbe3ffc84, type: 2}
+  redD: {fileID: 1963268856832048, guid: e43bc21105f09bf40895c096b57822cb, type: 2}
+  blueD: {fileID: 1949157119839654, guid: 9081114de55eacd45825bb70e49338b1, type: 2}
+  greenD: {fileID: 1984947773683606, guid: fae684cd528ce1746b54be8fdd159e14, type: 2}
+  pinkD: {fileID: 1325344546344274, guid: 04a96498f96a0c04cac9dabe4254c0aa, type: 2}
+  cyanD: {fileID: 1584768795257076, guid: d2cf795a8ef55c0419e62250b4383e7b, type: 2}
+  yellowD: {fileID: 1872302537119264, guid: 691006af8c81c0249bf281ae756bd989, type: 2}
+  grayD: {fileID: 1764403876925664, guid: 9412766ce9cfdf14eba5c9319d0c3e27, type: 2}
+  Player: {fileID: 0}
