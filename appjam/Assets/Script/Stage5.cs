@@ -15,7 +15,6 @@ public class Stage5 : MonoBehaviour {
 		if(Player.GetComponent<PlayerStatus>().red == 2 && Player.GetComponent<PlayerStatus>().blue == 2 && Player.GetComponent<PlayerStatus>().green == 2)
         {
             PlayerPrefs.SetInt("SceneClear1", 1);
-
             Time.timeScale = 1;
             PlayerPrefs.SetInt("istomain", 1);
             SceneManager.LoadScene("LoadingScene");
